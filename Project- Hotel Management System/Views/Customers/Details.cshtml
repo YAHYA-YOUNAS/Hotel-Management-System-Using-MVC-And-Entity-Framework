@@ -1,0 +1,42 @@
+﻿@model Project__Hotel_Management_System.Models.tbl_customers
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+}
+
+<h2>Details of Customer</h2>
+
+<div>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <strong>Customer Name</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer_name)
+        </dd>
+
+        <dt>
+            <strong>Customer Address</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer_address)
+        </dd>
+
+        <dt>
+            <strong>Customer Contact</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer_contact)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.customer_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

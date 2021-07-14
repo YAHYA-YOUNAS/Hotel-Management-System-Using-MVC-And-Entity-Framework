@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_HotelManagementSystemModelStoreContainer" CdmEntityContainer="db_HotelManagementSystemEntities">
+    <EntitySetMapping Name="tbl_bookings">
+      <EntityTypeMapping TypeName="db_HotelManagementSystemModel.tbl_bookings">
+        <MappingFragment StoreEntitySet="tbl_bookings">
+          <ScalarProperty Name="booking_id" ColumnName="booking_id" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="num_of_guests" ColumnName="num_of_guests" />
+          <ScalarProperty Name="total_price" ColumnName="total_price" />
+          <ScalarProperty Name="is_paid" ColumnName="is_paid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_customers">
+      <EntityTypeMapping TypeName="db_HotelManagementSystemModel.tbl_customers">
+        <MappingFragment StoreEntitySet="tbl_customers">
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="customer_address" ColumnName="customer_address" />
+          <ScalarProperty Name="customer_contact" ColumnName="customer_contact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_rooms">
+      <EntityTypeMapping TypeName="db_HotelManagementSystemModel.tbl_rooms">
+        <MappingFragment StoreEntitySet="tbl_rooms">
+          <ScalarProperty Name="room_id" ColumnName="room_id" />
+          <ScalarProperty Name="room_number" ColumnName="room_number" />
+          <ScalarProperty Name="room_type" ColumnName="room_type" />
+          <ScalarProperty Name="room_availability" ColumnName="room_availability" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

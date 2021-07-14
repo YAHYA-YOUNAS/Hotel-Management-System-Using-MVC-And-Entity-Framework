@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Hotel Management System</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="~/Content/Home_Page/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="~/Content/Home_Page/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="~/Content/Home_Page/css/responsive.css">
+    <!-- fevicon -->
+    <link rel="shortcut icon" type="image/jpg" href="~/Content/Home_Page/images/logo.ico" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="~/Content/Home_Page/css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="~/Content/Home_Page/images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- end header -->
+    <!-- banner -->
+    <section>
+        
+        <div class="container">
+            
+            <div class="row">
+               
+                <div class="col-md-12">
+                    
+                    <div class="text-bg">
+                        <div class="padding_lert">
+                            <h1></h1>
+                            <span></span>
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- end banner -->
+
+    <footer id="contact">
+        <div class="footer">
+
+            <div class="copyright">
+                <div class="col-md-12">
+                    <p>&copy; @DateTime.Now.Year - All Right Reserved By Muhammad Yahya Younas</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Javascript files-->
+    <script src="~/Content/Home_Page/js/jquery.min.js"></script>
+    <script src="~/Content/Home_Page/js/popper.min.js"></script>
+    <script src="~/Content/Home_Page/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/Home_Page/js/jquery-3.0.0.min.js"></script>
+    <script src="~/Content/Home_Page/js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="~/Content/Home_Page/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/Content/Home_Page/js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+</html>
+
+

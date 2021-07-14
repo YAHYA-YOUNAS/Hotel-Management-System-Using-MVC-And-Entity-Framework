@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Project__Hotel_Management_System.Models.tbl_customers>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+}
+
+<h2><strong>CUSTOMERS</strong></h2>
+
+@Html.Raw(TempData["InsertMessage"])
+@Html.Raw(TempData["UpdateMessage"])
+@Html.Raw(TempData["DeleteMessage"])
+
+<p>
+    @Html.ActionLink("Add New Customer", "Add")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <h4><strong>Customer Name</strong></h4>
+        </th>
+        <th>
+            <h4><strong>Customer Address</strong></h4>
+        </th>
+        <th>
+            <h4><strong>Customer Contact</strong></h4>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_contact)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.customer_id })
+            @Html.ActionLink("Details", "Details", new { id=item.customer_id })
+            @Html.ActionLink("Delete", "Delete", new { id=item.customer_id })
+        </td>
+    </tr>
+}
+
+</table>

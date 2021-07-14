@@ -1,0 +1,50 @@
+﻿@model Project__Hotel_Management_System.Models.tbl_bookings
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+}
+
+<h2>Details Of Booking</h2>
+
+<div>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <strong>Duration</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duration)
+        </dd>
+
+        <dt>
+            <strong>Number Of Guests</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_of_guests)
+        </dd>
+
+        <dt>
+            <strong>Total Price</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_price)
+        </dd>
+
+        <dt>
+            <strong>Paid</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_paid)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.booking_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

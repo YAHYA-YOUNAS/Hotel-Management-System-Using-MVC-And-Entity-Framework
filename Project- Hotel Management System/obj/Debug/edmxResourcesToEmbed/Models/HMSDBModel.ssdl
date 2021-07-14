@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_HotelManagementSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_bookings">
+    <Key>
+      <PropertyRef Name="booking_id" />
+    </Key>
+    <Property Name="booking_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="duration" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="num_of_guests" Type="int" Nullable="false" />
+    <Property Name="total_price" Type="int" Nullable="false" />
+    <Property Name="is_paid" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_customers">
+    <Key>
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="customer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="customer_address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="customer_contact" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_rooms">
+    <Key>
+      <PropertyRef Name="room_id" />
+    </Key>
+    <Property Name="room_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="room_number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="room_type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="room_availability" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="db_HotelManagementSystemModelStoreContainer">
+    <EntitySet Name="tbl_bookings" EntityType="Self.tbl_bookings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_customers" EntityType="Self.tbl_customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_rooms" EntityType="Self.tbl_rooms" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

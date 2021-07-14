@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Project__Hotel_Management_System.Models.tbl_rooms>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+}
+
+<h2><strong>Room Information</strong></h2>
+
+@Html.Raw(TempData["InsertMessage"])
+@Html.Raw(TempData["UpdateMessage"])
+@Html.Raw(TempData["DeleteMessage"])
+
+<p>
+    @Html.ActionLink("Add New Room", "Add")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <h4><strong>Room Number</strong></h4>
+        </th>
+        <th>
+            <h4><strong>Room Type</strong></h4>
+        </th>
+        <th>
+            <h4><strong>Room Availability</strong></h4>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.room_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.room_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.room_availability)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.room_id }) 
+            @Html.ActionLink("Details", "Details", new { id=item.room_id }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.room_id })
+        </td>
+    </tr>
+}
+
+</table>

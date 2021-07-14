@@ -1,0 +1,54 @@
+﻿@model Project__Hotel_Management_System.Models.tbl_rooms
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+}
+
+<h2>Edit Room Information</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.room_id)
+
+        <div class="form-group">
+            <h4><strong>Room Number</strong></h4>
+            <div>
+                @Html.EditorFor(model => model.room_number)
+                @Html.ValidationMessageFor(model => model.room_number)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4><strong>Room Type</strong></h4>
+            <div>
+                @Html.EditorFor(model => model.room_type)
+                @Html.ValidationMessageFor(model => model.room_type)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4><strong>Room Availability</strong></h4>
+            <div>
+                @Html.EditorFor(model => model.room_availability)
+                @Html.ValidationMessageFor(model => model.room_availability)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div>
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

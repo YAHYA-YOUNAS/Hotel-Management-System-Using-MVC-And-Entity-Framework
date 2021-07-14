@@ -1,0 +1,43 @@
+﻿@model Project__Hotel_Management_System.Models.tbl_rooms
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+}
+
+<h2>Detail of Rooms</h2>
+
+<div>
+    <h4>tbl_rooms</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <strong>Room Number</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.room_number)
+        </dd>
+
+        <dt>
+            <strong>Room Type</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.room_type)
+        </dd>
+
+        <dt>
+            <strong>Room Availability</strong>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.room_availability)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.room_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

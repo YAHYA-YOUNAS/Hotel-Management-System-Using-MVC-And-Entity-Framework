@@ -1,0 +1,52 @@
+﻿@model Project__Hotel_Management_System.Models.tbl_customers
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+}
+
+<h2><strong>Add New Customer</strong></h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            <h4><strong>Customer Name</strong></h4>
+            <div>
+                @Html.EditorFor(model => model.customer_name)
+                @Html.ValidationMessageFor(model => model.customer_name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4><strong>Customer Address</strong></h4>
+            <div>
+                @Html.EditorFor(model => model.customer_address)
+                @Html.ValidationMessageFor(model => model.customer_address)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4><strong>Customer Contact</strong></h4>
+            <div>
+                @Html.EditorFor(model => model.customer_contact)
+                @Html.ValidationMessageFor(model => model.customer_contact)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div>
+                <input type="submit" value="Add" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

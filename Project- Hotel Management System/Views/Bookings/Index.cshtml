@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Project__Hotel_Management_System.Models.tbl_bookings>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = ("~/Views/Shared/_SimpleLayout.cshtml");
+}
+
+<h2><strong>BOOKINGS</strong></h2>
+
+@Html.Raw(TempData["InsertMessage"])
+@Html.Raw(TempData["UpdateMessage"])
+@Html.Raw(TempData["DeleteMessage"])
+
+<p>
+    @Html.ActionLink("Create New Booking", "Create") 
+</p>
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            <h4><strong>Duration</strong></h4>
+        </th>
+        <th>
+            <h4><strong>No. of guests</strong></h4>
+        </th>
+        <th>
+            <h4><strong>Total Price</strong></h4>
+        </th>
+        <th>
+            <h4><strong>Paid</strong></h4>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_of_guests)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_paid)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.booking_id }) 
+            @Html.ActionLink("Details", "Details", new { id=item.booking_id }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.booking_id })
+        </td>
+    </tr>
+}
+
+</table>
+
+
